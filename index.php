@@ -8,20 +8,30 @@
     <title>Document</title>
 </head>
 <body>
+<?php 
+session_start();
+if(isset($_GET['email'])) 
+{$_SESSION['value'] = $_GET['email'];} else{ $_SESSION['value']= 'Scrivere email qui';}
+
+
+?>
+
+
   <div class="wrapper d-flex w-100 justify-content-center align-items-center">
   <div class="container w-25">
    <form action="index.php" method="GET">
     <label for="email">
         <input name="email" type="text" placeholder=
-        <?php 
+       " <?php 
          include_once __DIR__.'/functions.php';
         if(isset($_GET['email'])) {
-          if (check($_GET['email'])==true) {echo "'Email corretta'";} else {echo "'EMAIL ERRATA'";} }else{echo 'Scrivere email qui';}?>
-        
+          if (check($_GET['email'])==true) {echo "'Email corretta'"; 
+          } elseif(check($_GET['email'])==false) {echo $_SESSION['value'];} }else{echo $_SESSION['value']; }?>
+        "
         
          class=
         "<?php 
-          include_once __DIR__.'/functions.php';
+
         
         if(isset($_GET['email'])) {if(check($_GET['email'])==true){echo "success"; header('Location: ./thanks.php'); } else {echo "failure";}} else{echo 'normal';} 
         ?>" >

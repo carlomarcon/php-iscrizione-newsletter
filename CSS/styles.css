@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.goBack {
+  margin-left: 10px;
+}
+
 .green {
   background-color: green;
 }
