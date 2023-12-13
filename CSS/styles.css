@@ -4,10 +4,29 @@
   box-sizing: border-box;
 }
 
+.green {
+  background-color: green;
+}
+
+.wrapper {
+  height: 400px;
+}
+
 .success {
   background-color: green;
+  outline: none;
 }
 
 .failure {
   background-color: red;
+  outline: none;
 }
+
+.normal {
+  outline: none;
+}
+
+/* input:focus {
+  border: none;
+  width: 50px;
+} */
