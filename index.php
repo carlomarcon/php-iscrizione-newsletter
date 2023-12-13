@@ -8,14 +8,21 @@
 <body>
    <form action="index.php" method="GET">
     <label for="email">
-        <input name="email" type="email" >
+        <input name="email" type="text" >
     </label>
     <button class="submit">Invia</button>
    </form>
 
 
-   <?php if(isset($_GET['email'])) {
-    echo $_GET['email'];
-   } ?>
+   <?php
+   include_once __DIR__.'/functions.php';
+   
+   if(isset($_GET['email'])) {
+    echo check($_GET['email']);
+   } 
+
+   ?>
+
+   
 </body>
 </html>
