@@ -9,10 +9,11 @@
 <body>
    <form action="index.php" method="GET">
     <label for="email">
-        <input name="email" type="text" class="<?php 
+        <input name="email" type="text" class=
+        "<?php 
           include_once __DIR__.'/functions.php';
         
-        if(isset($_GET['email'])) {if(check($_GET['email'])==true){echo "success"; } else {}} 
+        if(isset($_GET['email'])) {if(check($_GET['email'])==true){echo "success"; } else {echo "failure";}} 
         ?>" >
     </label>
     <button class="submit">Invia </button>
